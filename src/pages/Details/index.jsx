@@ -6,7 +6,9 @@ export function Details() {
     <Container>
       <h1>Hello World</h1>
       <span>Ana Claudia Nogueira</span>
-      <Button />
+      <Button title="Login" />
+      <Button title="Entrar" />
+      <Button title="Cadastrar" />
     </Container>
   );
 }
