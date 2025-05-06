@@ -43,6 +43,8 @@ export const Search = styled.ul`
 `;
 export const Content = styled.div`
   grid-area: content;
+  padding: 0 64px;
+  overflow-y: auto;
 `;
 export const NewNote = styled.button`
   grid-area: newnote;
