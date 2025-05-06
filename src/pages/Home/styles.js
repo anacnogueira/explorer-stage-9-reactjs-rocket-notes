@@ -16,7 +16,15 @@ export const Container = styled.div`
 `;
 export const Brand = styled.div`
   grid-area: brand;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.BRAGROUND_700};
+  background: ${({ theme }) => theme.COLORS.BRAGROUND_900};
+
+  > h1 {
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.ORANGE};
+  }
 `;
 export const Menu = styled.ul`
   grid-area: menu;
