@@ -24,7 +24,6 @@ export const Form = styled.form`
     font-size: 24px;
     margin: 48px 0;
   }
-  }
 
   > p {
     font-size: 14px;
