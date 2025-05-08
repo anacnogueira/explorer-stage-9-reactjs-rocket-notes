@@ -2,6 +2,8 @@ import { Header } from "../../components/Header";
 import { Container, Form } from "./styles";
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
+import { NoteItem } from "../../components/NoteItem";
+import { Section } from "../../components/Section";
 
 export function New() {
   return (
@@ -16,6 +18,10 @@ export function New() {
 
           <Input placeholder="Título" />
           <Textarea placeholder="Observações" />
+          <Section title="Links ùteis">
+            <NoteItem value="https://mayacosmeticos.com.br" />
+            <NoteItem isNew placeholder="Novo Link" />
+          </Section>
         </Form>
       </main>
     </Container>
