@@ -37,8 +37,20 @@ export function AuthProvider({ children }) {
       });
     }
   }, []);
+
+  function signOut() {
+    const token = localStorage.removeItem("@notes:token");
+    const user = localStorage.removeItem("@notes:user");
+    setData({});
+  }
   return (
-    <AuthContext.Provider value={{ signIn, user: data.user }}>
+    <AuthContext.Provider
+      value={{
+        signIn,
+        signOut,
+        user: data.user,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
