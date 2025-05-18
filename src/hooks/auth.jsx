@@ -44,11 +44,29 @@ export function AuthProvider({ children }) {
     const user = localStorage.removeItem("@notes:user");
     setData({});
   }
+
+  async function updateProfile({ user }) {
+    try {
+      await api.put("/users", user);
+
+      localStorage.setItem("@notes:user", JSON.stringify(user));
+
+      setData({ user, token: data.token });
+      alert("Updated profile");
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Unable to update profile");
+      }
+    }
+  }
   return (
     <AuthContext.Provider
       value={{
         signIn,
         signOut,
+        updateProfile,
         user: data.user,
       }}
     >
