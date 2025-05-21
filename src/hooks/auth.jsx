@@ -25,6 +25,12 @@ export function AuthProvider({ children }) {
     }
   }
 
+  function signOut() {
+    const token = localStorage.removeItem("@notes:token");
+    const user = localStorage.removeItem("@notes:user");
+    setData({});
+  }
+
   useEffect(() => {
     const token = localStorage.getItem("@notes:token");
     const user = localStorage.getItem("@notes:user");
@@ -38,12 +44,6 @@ export function AuthProvider({ children }) {
       });
     }
   }, []);
-
-  function signOut() {
-    const token = localStorage.removeItem("@notes:token");
-    const user = localStorage.removeItem("@notes:user");
-    setData({});
-  }
 
   async function updateProfile({ user, avatarFile }) {
     try {
