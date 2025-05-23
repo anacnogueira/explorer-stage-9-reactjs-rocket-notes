@@ -1,3 +1,3 @@
 # Projeto Publicado
 
-https://peaceful-chaja-d710f3.netlify.app/
+<a href="https://peaceful-chaja-d710f3.netlify.app/" target="_blank"> Link</a>
